@@ -5,11 +5,7 @@
 
 def stock_picker (a)
   stock_array = []
-  min = a.min
-  max = a.max
-  stock_array << a.index(min)
-  stock_array << a.index(max)
-  stock_array
+  stock_array << a.index(a.min) << a.index(a.max)
 end
 
 stock_picker([2,33,5,666,8])
