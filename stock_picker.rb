@@ -4,8 +4,14 @@
 
 
 def stock_picker (a)
-  max_number = a.max
-  min_number = a.min
-  sum_number = max_number - min_number
-  "for a profit of #{sum_number}, buy when its #{min_number} and sell when its #{max_number}"
+  stock_array = []
+  min = a.min
+  max = a.max
+  stock_array << a.index(min)
+  stock_array << a.index(max)
+  stock_array
 end
+
+stock_picker([2,33,5,666,8])
+stock_picker([3,33,5,666,1])
+stock_picker([100,33,5,66,8])
