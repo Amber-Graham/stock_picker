@@ -5,8 +5,15 @@
 
 def stock_picker (a)
   stock_array = []
-  stock_array << a.index(a.min) << a.index(a.max)
+  res = a.each_with_index.with_object([]) do |(buy_value, index), res| 
+    highest_value = a[index..].max
+    highest_index = a[index..].each_with_index.max[1] + index
+    res << [highest_value - buy_value, index, highest_index]
+  end.max_by(&:first)
+  result_days = res[1,2]
 end
+
+
 
 stock_picker([2,33,5,666,8])
 stock_picker([3,33,5,666,1])
