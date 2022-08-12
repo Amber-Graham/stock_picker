@@ -18,3 +18,7 @@ I did not follow the instructions properly.
 The only way my stock picker works is if there
 is time travel involved. I am going to rework
 this now!
+
+**********************************************
+Much better. The code now takes into account
+the actual timeline of buy days.
